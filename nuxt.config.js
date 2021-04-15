@@ -39,7 +39,38 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/firebase',
   ],
+  firebase: {
+    config: {
+      apiKey: 'AIzaSyBY66ZuvvRIGE46uUH1RRWZHqh8IdlU5HQ',
+      authDomain: 'dev-calendar-iviluz.firebaseapp.com',
+      projectId: 'dev-calendar-iviluz',
+      storageBucket: 'dev-calendar-iviluz.appspot.com',
+      messagingSenderId: '654886328709',
+      appId: '1:654886328709:web:368321db27f0528a0a8cec',
+      // measurementId: '<measurementId>',
+    },
+    services: {
+      auth: {
+        // persistence: 'local', // default
+        initialize: {
+          // onAuthStateChangedMutation: 'ON_AUTH_STATE_CHANGED_MUTATION',
+          onAuthStateChangedAction: 'onAuthStateChangedAction',
+          // subscribeManually: false,
+        },
+        // ssr: false, // default
+        // emulatorPort: 9099,
+        // emulatorHost: 'http://localhost',
+      }, // Just as example. Can be any other service.
+      firestore: {
+        // memoryOnly: false,
+        enablePersistence: true,
+        // emulatorPort: 9000,
+        // emulatorHost: 'localhost',
+      },
+    },
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},

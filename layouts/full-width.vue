@@ -1,7 +1,7 @@
 <template>
-  <v-app>
-    <v-main class="justify-center align-center grey lighten-2">
-      <v-container>
+  <v-app class="fill-height">
+    <v-main class="justify-center align-center grey lighten-2 fill-height">
+      <v-container fluid>
         <nuxt />
       </v-container>
     </v-main>
